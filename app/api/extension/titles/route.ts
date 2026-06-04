@@ -62,7 +62,7 @@ IMPORTANT:
 "${title}"
 
 Rules:
-- Titles must be written in Turkish
+- Titles must be written in the SAME LANGUAGE as the input title
 - Maximum 95 characters
 - Natural human style
 - No clickbait spam
