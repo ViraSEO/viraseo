@@ -13,7 +13,8 @@ export default function HomePage() {
           "radial-gradient(circle at top left, rgba(124,58,237,0.25), transparent 35%), radial-gradient(circle at top right, rgba(6,182,212,0.18), transparent 35%), #020617",
         color: "white",
         fontFamily: "Arial",
-        overflow: "hidden",
+        overflowX: "hidden",
+width: "100%",
       }}
     >
       <header
@@ -108,7 +109,7 @@ export default function HomePage() {
         style={{
           padding: "90px 56px 50px",
           display: "grid",
-          gridTemplateColumns: "1.05fr 0.95fr",
+          gridTemplateColumns: "repeat(auto-fit,minmax(320px,1fr))",
           gap: "60px",
           alignItems: "flex-start",
         }}
@@ -133,7 +134,7 @@ export default function HomePage() {
 
           <h2
             style={{
-              fontSize: "60px",
+              fontSize: "clamp(36px, 8vw, 60px)",
               lineHeight: 1,
               fontWeight: "900",
               letterSpacing: "-3px",
@@ -754,6 +755,48 @@ export default function HomePage() {
         <strong style={{ color: "white" }}>✦ ViraSEO</strong>
         <span>© 2026 ViraSEO. All rights reserved.</span>
       </footer>
+      <style jsx global>{`
+  @media (max-width: 768px) {
+    main {
+      overflow-x: hidden !important;
+    }
+
+    header {
+      padding: 18px 18px !important;
+      flex-direction: column !important;
+      gap: 16px !important;
+      align-items: flex-start !important;
+    }
+
+    nav {
+      display: none !important;
+    }
+
+    section {
+      padding-left: 18px !important;
+      padding-right: 18px !important;
+    }
+
+    h1 {
+      font-size: 26px !important;
+    }
+
+    h2 {
+      font-size: 36px !important;
+      line-height: 1.1 !important;
+      letter-spacing: -1px !important;
+    }
+
+    button {
+      width: 100%;
+    }
+
+    div {
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+  }
+`}</style>
     </main>
   );
 }
