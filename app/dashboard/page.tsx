@@ -141,7 +141,7 @@ setChannelHistory(historyData || []);
   const [contentNiche, setContentNiche] = useState("");
   const [visibleVideos, setVisibleVideos] = useState(5);
   const [hoveredScore, setHoveredScore] = useState<number | null>(null);
-  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(true);
   
     
 
@@ -470,6 +470,8 @@ const getHistoryGrowth = (days: number, field: "subscriber_count" | "view_count"
 
   if (isMobile) {
   return (
+
+    
     <main
       style={{
         minHeight: "100vh",
@@ -562,14 +564,15 @@ const getHistoryGrowth = (days: number, field: "subscriber_count" | "view_count"
         </p>
       </div>
     </main>
-  );
+  
+);
 }
 
     return (
+  <>
+    <Sidebar sidebarOpen={sidebarOpen} />
 
-      
-      
-      <main
+    <main
           style={{
           minHeight: "100vh",
           background: lightMode ? "#f8fafc" : "#050816",
@@ -617,7 +620,7 @@ const getHistoryGrowth = (days: number, field: "subscriber_count" | "view_count"
   typeof window !== "undefined" && window.innerWidth < 768
     ? "18px"
     : "40px",
-    marginLeft: "0px",
+    marginLeft: sidebarOpen ? "280px" : "0px",
     transition: "0.3s",
   }}
 >
@@ -776,23 +779,24 @@ height: "70px",
       </p>
     </div>
 
-    <button
-      onClick={() =>
-        alert("Chrome Store version coming soon 🚀")
-      }
-      style={{
-        background: "white",
-        color: "#7c3aed",
-        border: "none",
-        padding: "16px 28px",
-        borderRadius: "18px",
-        fontWeight: "900",
-        cursor: "pointer",
-        fontSize: "16px",
-      }}
-    >
-      Install Extension
-    </button>
+    <a
+  href="/viraseo-assistant-v1.zip"
+  download
+  style={{
+    background: "white",
+    color: "#7c3aed",
+    border: "none",
+    padding: "16px 28px",
+    borderRadius: "18px",
+    fontWeight: "900",
+    cursor: "pointer",
+    fontSize: "16px",
+    textDecoration: "none",
+    display: "inline-block",
+  }}
+>
+  🧩 Install Extension
+</a>
   </div>
 </div>
 
@@ -1716,5 +1720,6 @@ Latest videos loaded successfully.
           </div>
         
       </main>
-    );
-  }
+  </>
+);
+}

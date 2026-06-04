@@ -1,8 +1,10 @@
 "use client";
 
+import { useState } from "react";
 import { signIn } from "next-auth/react";
 
 export default function HomePage() {
+  const [menuOpen, setMenuOpen] = useState(false);
   const login = () => signIn("google", { callbackUrl: "/dashboard" });
 
   return (
@@ -88,7 +90,23 @@ width: "100%",
     Insights
   </span>
 </nav>
-
+<button
+  onClick={() => setMenuOpen(!menuOpen)}
+  className="desktop-menu-button"
+  style={{
+    background: "rgba(255,255,255,0.06)",
+    border: "1px solid rgba(255,255,255,0.12)",
+    color: "white",
+    width: "46px",
+    height: "46px",
+    borderRadius: "14px",
+    cursor: "pointer",
+    fontWeight: "900",
+    fontSize: "22px",
+  }}
+>
+  ☰
+</button>
         <button
           onClick={login}
           style={{
@@ -104,6 +122,48 @@ width: "100%",
           Continue with Google
         </button>
       </header>
+
+      {menuOpen && (
+  <div
+    style={{
+      position: "absolute",
+      top: "86px",
+      right: "56px",
+      zIndex: 50,
+      background: "rgba(15,23,42,0.96)",
+      border: "1px solid rgba(255,255,255,0.12)",
+      borderRadius: "22px",
+      padding: "16px",
+      width: "230px",
+      boxShadow: "0 30px 80px rgba(0,0,0,0.45)",
+      backdropFilter: "blur(16px)",
+    }}
+  >
+    {[
+      ["Features", "features"],
+      ["Tools", "workflow"],
+      ["Insights", "preview"],
+      ["Install Guide", "install-guide"],
+    ].map(([label, id]) => (
+      <div
+        key={id}
+        onClick={() => {
+          document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+          setMenuOpen(false);
+        }}
+        style={{
+          padding: "13px 14px",
+          borderRadius: "14px",
+          color: "#cbd5e1",
+          fontWeight: "900",
+          cursor: "pointer",
+        }}
+      >
+        {label}
+      </div>
+    ))}
+  </div>
+)}
 
       <section
         style={{
