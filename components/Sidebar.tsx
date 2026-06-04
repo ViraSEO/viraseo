@@ -24,7 +24,14 @@ export default function Sidebar({ sidebarOpen }: Props) {
   return (
     <aside
       style={{
-        width: sidebarOpen ? "280px" : "0px",
+        width:
+  typeof window !== "undefined" && window.innerWidth < 768
+    ? sidebarOpen
+      ? "100%"
+      : "0px"
+    : sidebarOpen
+    ? "280px"
+    : "0px",
         overflow: "hidden",
         minHeight: "100vh",
         background:
@@ -36,7 +43,7 @@ export default function Sidebar({ sidebarOpen }: Props) {
 top: 0,
 left: 0,
 height: "100vh",
-zIndex: 1000,
+zIndex: 9998,
       }}
     >
       <div

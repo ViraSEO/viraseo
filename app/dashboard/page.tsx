@@ -513,15 +513,15 @@ const getHistoryGrowth = (days: number, field: "subscriber_count" | "view_count"
   }
   style={{
     position: "fixed",
-    top: "20px",
-    left: "18px",
+    top: "12px",
+left: "12px",
     zIndex: 9999,
     background:
       "linear-gradient(to right,#7c3aed,#06b6d4)",
     border: "none",
     color: "white",
-    width: "48px",
-    height: "48px",
+    width: "42px",
+height: "42px",
     borderRadius: "16px",
     cursor: "pointer",
     fontSize: "24px",
@@ -538,8 +538,8 @@ const getHistoryGrowth = (days: number, field: "subscriber_count" | "view_count"
     flex: 1,
     padding:
       typeof window !== "undefined" && window.innerWidth < 768
-        ? "22px"
-        : "40px",
+        ? "70px 14px 20px"
+: "40px",
     marginLeft:
       typeof window !== "undefined" && window.innerWidth < 768
         ? "0px"
