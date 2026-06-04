@@ -468,6 +468,103 @@ const getHistoryGrowth = (days: number, field: "subscriber_count" | "view_count"
     return "Best upload time tomorrow: 12:00 - 15:00";
   };
 
+  if (isMobile) {
+  return (
+    <main
+      style={{
+        minHeight: "100vh",
+        background: "#050816",
+        color: "white",
+        fontFamily: "Arial",
+        padding: "18px",
+        overflowX: "hidden",
+      }}
+    >
+      <h1 style={{ fontSize: "28px", fontWeight: "900" }}>
+        🚀 ViraSEO
+      </h1>
+
+      <p style={{ color: "#94a3b8", marginTop: "8px" }}>
+        Welcome back, {session?.user?.name || "User"}
+      </p>
+
+      <div
+        style={{
+          marginTop: "22px",
+          background: "linear-gradient(135deg,#7c3aed,#06b6d4)",
+          borderRadius: "22px",
+          padding: "20px",
+        }}
+      >
+        <h2 style={{ fontSize: "24px", fontWeight: "900" }}>
+          Install Chrome Extension
+        </h2>
+
+        <p style={{ marginTop: "10px", lineHeight: 1.5 }}>
+          Use ViraSEO inside YouTube Studio on desktop Chrome.
+        </p>
+      </div>
+
+      <div
+        style={{
+          marginTop: "22px",
+          display: "grid",
+          gridTemplateColumns: "1fr",
+          gap: "14px",
+        }}
+      >
+        {[
+          ["Views", views],
+          ["Subscribers", subs],
+          ["Videos", videos],
+          ["AI Score", getAverageAIScore()],
+        ].map(([title, value]) => (
+          <div
+            key={String(title)}
+            style={{
+              background: "rgba(255,255,255,0.06)",
+              border: "1px solid rgba(255,255,255,0.08)",
+              borderRadius: "20px",
+              padding: "20px",
+            }}
+          >
+            <p style={{ color: "#94a3b8" }}>{title}</p>
+            <h2 style={{ fontSize: "30px", fontWeight: "900" }}>
+              {value}
+            </h2>
+          </div>
+        ))}
+      </div>
+
+      <div
+        style={{
+          marginTop: "22px",
+          background: "rgba(124,58,237,0.12)",
+          border: "1px solid rgba(124,58,237,0.25)",
+          borderRadius: "22px",
+          padding: "20px",
+        }}
+      >
+        <h2 style={{ fontSize: "22px", fontWeight: "900" }}>
+          Channel Insights
+        </h2>
+
+        <p style={{ marginTop: "12px", color: "#cbd5e1" }}>
+          👥 7 Day Growth: +{getHistoryGrowth(7, "subscriber_count")} Subs
+        </p>
+
+        <p style={{ marginTop: "10px", color: "#cbd5e1" }}>
+          👁 30 Day Views: +{getHistoryGrowth(30, "view_count")}
+        </p>
+
+        <p style={{ marginTop: "10px", color: "#cbd5e1" }}>
+          🕒 {getBestUploadTime()}
+        </p>
+      </div>
+    </main>
+  );
+}
+
     return (
 
       
