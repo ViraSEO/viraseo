@@ -95,3 +95,48 @@ body {
     grid-template-columns: 1fr !important;
   }
 }
+
+@media (max-width: 768px) {
+  #preview {
+    display: none !important;
+  }
+
+  main {
+    overflow-x: hidden !important;
+  }
+
+  header,
+  section,
+  footer {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  header {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+
+  header nav {
+    display: none !important;
+  }
+
+  section {
+    display: block !important;
+  }
+
+  h2 {
+    font-size: 34px !important;
+    line-height: 1.1 !important;
+    letter-spacing: -1px !important;
+  }
+
+  p {
+    font-size: 16px !important;
+  }
+
+  button {
+    width: 100% !important;
+  }
+}
