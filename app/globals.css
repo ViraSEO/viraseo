@@ -140,3 +140,43 @@ body {
     width: 100% !important;
   }
 }
+
+@media (max-width: 768px) {
+  aside,
+  .sidebar,
+  [class*="sidebar"],
+  [class*="Sidebar"] {
+    position: static !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: auto !important;
+    transform: none !important;
+    z-index: 1 !important;
+  }
+
+  main,
+  body,
+  html {
+    overflow-x: hidden !important;
+  }
+
+  [style*="margin-left"],
+  [style*="marginLeft"] {
+    margin-left: 0 !important;
+  }
+
+  [style*="width: 280px"],
+  [style*="width:280px"],
+  [style*="min-width: 280px"] {
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  [style*="display: grid"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  [style*="grid-template-columns"] {
+    grid-template-columns: 1fr !important;
+  }
+}
