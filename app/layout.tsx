@@ -3,9 +3,9 @@ import "./globals.css";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "ViraSEO - AI Powered YouTube Growth Tools",
+  title: "ViraSEO - AI YouTube SEO & Growth Chrome Extension",
   description:
-    "Boost your YouTube channel with AI SEO tools, title generator, tag generator, thumbnail analyzer and viral keyword research.",
+    "Generate AI YouTube titles, descriptions, tags, SEO insights and growth recommendations directly inside YouTube Studio with the ViraSEO Chrome Extension.",
 
   keywords: [
     "youtube seo",
