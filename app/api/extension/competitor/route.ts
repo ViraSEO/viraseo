@@ -80,6 +80,7 @@ export async function POST(req: Request) {
     return NextResponse.json(
       {
         title: snippet.title || "",
+        description: snippet.description || "",
         channelTitle: snippet.channelTitle || "",
         thumbnail:
           snippet.thumbnails?.maxres?.url ||
