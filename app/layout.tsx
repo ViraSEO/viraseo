@@ -1,51 +1,46 @@
 import Providers from "./providers";
 import "./globals.css";
+import type { Metadata } from "next";
 
-export const metadata = {
-  title: "ViraSEO - AI YouTube SEO & Growth Chrome Extension",
+export const metadata: Metadata = {
+  title: "ViraSEO - AI Powered YouTube Growth Tools",
   description:
-    "Generate AI YouTube titles, descriptions, tags, SEO insights and growth recommendations directly inside YouTube Studio with the ViraSEO Chrome Extension.",
+    "Boost your YouTube channel with AI SEO tools, title generator, tag generator, thumbnail analyzer and viral keyword research.",
+
   keywords: [
-    "ViraSEO",
-    "YouTube SEO tool",
-    "AI YouTube SEO",
-    "YouTube title generator",
-    "YouTube tag generator",
-    "YouTube Chrome extension",
-    "YouTube growth tool",
-    "AI title generator",
-    "YouTube Studio extension",
+    "youtube seo",
+    "youtube ai",
+    "youtube growth",
+    "youtube keyword tool",
+    "youtube title generator",
+    "youtube tags generator",
+    "youtube analytics",
+    "viraseo",
   ],
-  authors: [{ name: "ViraSEO" }],
-  creator: "ViraSEO",
-  publisher: "ViraSEO",
+
   openGraph: {
-    title: "ViraSEO - AI YouTube SEO & Growth Chrome Extension",
+    title: "ViraSEO",
     description:
-      "AI-powered YouTube SEO tools directly inside YouTube Studio. Generate titles, tags, descriptions and growth insights with ViraSEO.",
+      "AI Powered YouTube Growth Tools for creators.",
     url: "https://viraseo.vercel.app",
     siteName: "ViraSEO",
     images: [
       {
         url: "https://viraseo.vercel.app/viraseo-logo.png",
-        width: 1200,
-        height: 630,
-        alt: "ViraSEO AI YouTube SEO Chrome Extension",
+        width: 512,
+        height: 512,
       },
     ],
     locale: "en_US",
     type: "website",
   },
+
   twitter: {
     card: "summary_large_image",
-    title: "ViraSEO - AI YouTube SEO & Growth Chrome Extension",
+    title: "ViraSEO",
     description:
-      "Generate AI YouTube titles, tags, descriptions and SEO insights directly inside YouTube Studio.",
+      "AI Powered YouTube Growth Tools for creators.",
     images: ["https://viraseo.vercel.app/viraseo-logo.png"],
-  },
-  robots: {
-    index: true,
-    follow: true,
   },
 };
 
