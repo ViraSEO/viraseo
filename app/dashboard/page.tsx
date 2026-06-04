@@ -41,6 +41,9 @@ const videosRef = useRef<any>(null);
 const seoRef = useRef<any>(null);
 const competitorRef = useRef<any>(null);
   const lightMode = false;
+  const isMobile =
+  typeof window !== "undefined" &&
+  window.innerWidth < 768;
 
   useEffect(() => {
   if (typeof window !== "undefined") {
@@ -1261,7 +1264,7 @@ height: "70px",
       </div>
     ))}
   </div>
-
+{!isMobile && (
   <ChannelGrowth
   lightMode={lightMode}
   videosList={videosList}
@@ -1270,7 +1273,7 @@ height: "70px",
   calculateSEOScore={calculateSEOScore}
   getAverageAIScore={getAverageAIScore}
 />
-
+)}
   <TopKeywords
   lightMode={lightMode}
   getTopKeywords={getTopKeywords}
