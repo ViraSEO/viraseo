@@ -166,8 +166,9 @@ width: "100%",
           >
 
             
-<button
-  onClick={() => alert("Chrome Store version coming soon 🚀")}
+<a
+  href="/viraseo-assistant-v1.zip"
+  download
   style={{
     background: "rgba(124,58,237,0.15)",
     border: "1px solid rgba(124,58,237,0.35)",
@@ -177,10 +178,22 @@ width: "100%",
     cursor: "pointer",
     fontWeight: "900",
     fontSize: "16px",
+    textDecoration: "none",
+    display: "inline-block",
   }}
 >
   🧩 Install Extension
-</button>
+</a>
+
+<div className="mt-4">
+  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-green-500/30 bg-green-500/10 text-green-400 text-sm font-semibold">
+    🚀 FREE BETA ACCESS
+  </div>
+
+  <p className="text-gray-400 text-sm mt-2">
+    No Chrome Store required. Download the extension and install it in Chrome in less than 1 minute.
+  </p>
+</div>
 
             <button
               onClick={login}
@@ -548,6 +561,253 @@ width: "100%",
 </div>
         
       </section>
+      <section
+  id="install-guide"
+  style={{
+    padding: "80px 48px",
+    background: "linear-gradient(180deg, #050816 0%, #020617 100%)",
+    color: "white",
+  }}
+>
+  <div
+    style={{
+      maxWidth: "1200px",
+      margin: "0 auto",
+      display: "grid",
+      gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+      gap: "32px",
+      alignItems: "center",
+    }}
+  >
+    <div>
+      <div
+        style={{
+          display: "inline-flex",
+          alignItems: "center",
+          gap: "8px",
+          padding: "8px 14px",
+          borderRadius: "999px",
+          background: "rgba(34,197,94,0.12)",
+          border: "1px solid rgba(34,197,94,0.35)",
+          color: "#4ade80",
+          fontWeight: "900",
+          fontSize: "14px",
+          marginBottom: "18px",
+        }}
+      >
+        🚀 FREE BETA INSTALLATION
+      </div>
+
+      <h2
+        style={{
+          fontSize: "clamp(32px, 5vw, 54px)",
+          lineHeight: "1.05",
+          margin: "0 0 18px",
+          fontWeight: "950",
+          letterSpacing: "-1.5px",
+        }}
+      >
+        Install ViraSEO in less than 1 minute
+      </h2>
+
+      <p
+        style={{
+          color: "#94a3b8",
+          fontSize: "18px",
+          lineHeight: "1.7",
+          maxWidth: "560px",
+          marginBottom: "28px",
+        }}
+      >
+        ViraSEO is currently available as a free beta extension. Download it,
+        enable Developer Mode in Chrome, and start using AI SEO tools directly
+        inside YouTube Studio.
+      </p>
+
+      <div
+        style={{
+          display: "grid",
+          gap: "14px",
+        }}
+      >
+        {[
+          "Download the ViraSEO extension ZIP file",
+          "Extract the ZIP file to a folder",
+          "Open chrome://extensions in Google Chrome",
+          "Enable Developer Mode from the top right",
+          "Click Load Unpacked and select the extracted folder",
+        ].map((step, index) => (
+          <div
+            key={step}
+            style={{
+              display: "flex",
+              gap: "14px",
+              alignItems: "flex-start",
+              background: "rgba(15,23,42,0.7)",
+              border: "1px solid rgba(148,163,184,0.16)",
+              borderRadius: "18px",
+              padding: "16px",
+            }}
+          >
+            <span
+              style={{
+                minWidth: "34px",
+                height: "34px",
+                borderRadius: "999px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                background: "linear-gradient(135deg, #7c3aed, #06b6d4)",
+                color: "white",
+                fontWeight: "900",
+              }}
+            >
+              {index + 1}
+            </span>
+
+            <span
+              style={{
+                color: "#e2e8f0",
+                fontWeight: "800",
+                lineHeight: "1.5",
+              }}
+            >
+              {step}
+            </span>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <div
+      style={{
+        background: "rgba(15,23,42,0.78)",
+        border: "1px solid rgba(148,163,184,0.18)",
+        borderRadius: "28px",
+        padding: "24px",
+        boxShadow: "0 30px 80px rgba(0,0,0,0.35)",
+      }}
+    >
+      <div
+        style={{
+          borderRadius: "20px",
+          overflow: "hidden",
+          background: "#020617",
+          border: "1px solid rgba(148,163,184,0.15)",
+        }}
+      >
+        <div
+          style={{
+            padding: "14px 16px",
+            borderBottom: "1px solid rgba(148,163,184,0.12)",
+            display: "flex",
+            gap: "8px",
+          }}
+        >
+          <span style={{ width: 10, height: 10, borderRadius: 999, background: "#ef4444" }} />
+          <span style={{ width: 10, height: 10, borderRadius: 999, background: "#f59e0b" }} />
+          <span style={{ width: 10, height: 10, borderRadius: 999, background: "#22c55e" }} />
+        </div>
+
+        <div style={{ padding: "22px" }}>
+          <div
+            style={{
+              color: "#94a3b8",
+              fontWeight: "900",
+              fontSize: "14px",
+              marginBottom: "12px",
+            }}
+          >
+            chrome://extensions
+          </div>
+
+          <div
+            style={{
+              background: "rgba(30,41,59,0.9)",
+              border: "1px solid rgba(148,163,184,0.16)",
+              borderRadius: "18px",
+              padding: "18px",
+              marginBottom: "14px",
+            }}
+          >
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+                marginBottom: "16px",
+              }}
+            >
+              <strong style={{ fontSize: "18px" }}>Extensions</strong>
+              <span
+                style={{
+                  background: "rgba(34,197,94,0.15)",
+                  color: "#4ade80",
+                  border: "1px solid rgba(34,197,94,0.35)",
+                  borderRadius: "999px",
+                  padding: "6px 10px",
+                  fontSize: "12px",
+                  fontWeight: "900",
+                }}
+              >
+                Developer Mode ON
+              </span>
+            </div>
+
+            <div
+              style={{
+                display: "grid",
+                gap: "10px",
+              }}
+            >
+              <div
+                style={{
+                  background: "linear-gradient(135deg, #7c3aed, #06b6d4)",
+                  borderRadius: "14px",
+                  padding: "14px",
+                  fontWeight: "900",
+                }}
+              >
+                Load Unpacked
+              </div>
+
+              <div
+                style={{
+                  background: "rgba(2,6,23,0.8)",
+                  border: "1px solid rgba(148,163,184,0.12)",
+                  borderRadius: "14px",
+                  padding: "14px",
+                  color: "#cbd5e1",
+                  fontWeight: "800",
+                }}
+              >
+                ViraSEO Assistant installed ✅
+              </div>
+            </div>
+          </div>
+
+          <a
+            href="/viraseo-assistant-v1.zip"
+            download
+            style={{
+              display: "block",
+              textAlign: "center",
+              width: "100%",
+              background: "linear-gradient(135deg, #7c3aed, #06b6d4)",
+              color: "white",
+              padding: "16px",
+              borderRadius: "16px",
+              textDecoration: "none",
+              fontWeight: "950",
+            }}
+          >
+            Download Free Beta Extension
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
       <section
         style={{
@@ -769,8 +1029,13 @@ width: "100%",
     }
 
     nav {
-      display: none !important;
-    }
+  display: flex !important;
+  width: 100%;
+  justify-content: center !important;
+  gap: 18px !important;
+  font-size: 14px !important;
+  flex-wrap: wrap !important;
+}
 
     section {
       padding-left: 18px !important;
