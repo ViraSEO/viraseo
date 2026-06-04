@@ -505,57 +505,34 @@ const getHistoryGrowth = (days: number, field: "subscriber_count" | "view_count"
         <style>{pulse + progressGlow + fillBar}</style>
 
         
- <Sidebar sidebarOpen={sidebarOpen} />
+ 
 
-<button
-  onClick={() =>
-    setSidebarOpen(!sidebarOpen)
-  }
-  style={{
-    position: "fixed",
-    top: "12px",
-left: "12px",
-    zIndex: 9999,
-    background:
-      "linear-gradient(to right,#7c3aed,#06b6d4)",
-    border: "none",
-    color: "white",
-    width: "42px",
-height: "42px",
-    borderRadius: "16px",
-    cursor: "pointer",
-    fontSize: "24px",
-    fontWeight: "900",
-    boxShadow:
-      "0 0 30px rgba(124,58,237,0.45)",
-  }}
->
-  ☰
-</button>
+
 
         <div
   style={{
     flex: 1,
     padding:
-      typeof window !== "undefined" && window.innerWidth < 768
-        ? "70px 14px 20px"
-: "40px",
-    marginLeft:
-      typeof window !== "undefined" && window.innerWidth < 768
-        ? "0px"
-        : sidebarOpen
-        ? "280px"
-        : "0px",
+  typeof window !== "undefined" && window.innerWidth < 768
+    ? "18px"
+    : "40px",
+    marginLeft: "0px",
     transition: "0.3s",
   }}
 >
           <div
             style={{
               display: "flex",
-              justifyContent: "space-between",
-              flexWrap: "wrap",
-              gap: "30px",
-              alignItems: "center",
+flexDirection:
+  typeof window !== "undefined" && window.innerWidth < 768
+    ? "column"
+    : "row",
+justifyContent: "space-between",
+gap: "20px",
+alignItems:
+  typeof window !== "undefined" && window.innerWidth < 768
+    ? "flex-start"
+    : "center",
               marginBottom: "40px",
             }}
           >
@@ -573,7 +550,10 @@ height: "42px",
 
               <h2
   style={{
-    fontSize: "42px",
+    fontSize:
+  typeof window !== "undefined" && window.innerWidth < 768
+    ? "28px"
+    : "42px",
     fontWeight: "900",
     background:
       "linear-gradient(to right,#ffffff,#a78bfa)",
@@ -598,8 +578,12 @@ height: "42px",
             <div
               style={{
                 display: "flex",
-                alignItems: "center",
-                gap: "16px",
+flexDirection:
+  typeof window !== "undefined" && window.innerWidth < 768
+    ? "column"
+    : "row",
+alignItems: "center",
+gap: "16px",
               }}
             >
               
@@ -632,8 +616,8 @@ height: "42px",
                 }
                 alt=""
                 style={{
-                  width: "50px",
-                  height: "50px",
+                  width: "70px",
+height: "70px",
                   borderRadius: "50%",
                   objectFit: "cover",
                   boxShadow:
@@ -649,7 +633,10 @@ height: "42px",
     background:
       "linear-gradient(135deg,#7c3aed,#06b6d4)",
     borderRadius: "28px",
-    padding: "28px",
+    padding:
+  typeof window !== "undefined" && window.innerWidth < 768
+    ? "18px"
+    : "28px",
     color: "white",
     boxShadow:
       "0 0 40px rgba(124,58,237,0.35)",
@@ -754,7 +741,7 @@ height: "42px",
                   gap: "24px",
                   alignItems: "flex-start",
                   flex: 1,
-                  minWidth: "320px",
+                  
                 }}
               >
                 <div
