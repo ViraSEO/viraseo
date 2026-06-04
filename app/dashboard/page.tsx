@@ -51,7 +51,8 @@ const competitorRef = useRef<any>(null);
 }, []);
   useEffect(() => {
 
-  
+  console.log("SESSION:", session);
+console.log("ACCESS TOKEN:", session?.accessToken);
     
     if (!session?.accessToken) return;
 
